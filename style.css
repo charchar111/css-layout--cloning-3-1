@@ -1,0 +1,73 @@
+@import "./reset.css";
+
+:root {
+  --border-ani__grid: 2px solid rgb(206, 179, 119);
+}
+
+body {
+}
+
+.animaition-layout {
+  height: 100vh;
+  position: relative;
+}
+
+.animaition-layout .wraps {
+  height: 100%;
+  position: relative;
+}
+
+.animaition-layout .wrap1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@keyframes animation-grid-column-start {
+  0% {
+    top: -100%;
+  }
+  80% {
+    top: 0%;
+  }
+}
+
+.ani__grid-column {
+  position: absolute;
+  height: 100%;
+  width: 42%;
+
+  border-left: var(--border-ani__grid);
+  border-right: var(--border-ani__grid);
+  animation: 1s cubic-bezier(0.66, 0.015, 0.285, 1.015) forwards
+    animation-grid-column-start;
+}
+@keyframes animation-grid-row-start {
+  0% {
+    left: -100%;
+  }
+  80% {
+    left: 0%;
+  }
+}
+
+.animaition-layout .wrap2 {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  top: 0%;
+  animation: 1s cubic-bezier(0.66, 0.015, 0.285, 1.015) forwards
+    animation-grid-row-start;
+}
+
+.ani__grid-row {
+  width: 100%;
+  height: 82.5%;
+  border-top: var(--border-ani__grid);
+  border-bottom: var(--border-ani__grid);
+}
